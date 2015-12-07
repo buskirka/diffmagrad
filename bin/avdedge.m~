@@ -1,0 +1,7 @@
+function dim = avdedge
+	if( exist('watermark','var') )
+		filter=(data <= watermark);
+	else
+		filter=(data ~= 0);
+	endif
+endfunction

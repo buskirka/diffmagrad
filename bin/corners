@@ -1,0 +1,46 @@
+#!/bin/bash
+
+cat <<EOF | sed -f <(cat *_MTL.txt \
+	| egrep 'CORNER_[UL][LR]_(LAT|LON)_PRODUCT|LANDSAT_SCENE_ID' \
+	| tr -d '[:blank:]"' \
+	| sed 's/^/s\//g;s/=/\//g;s/$/\/g/g')
+# Created by Octave 3.8.2, Tue Jun 23 15:10:11 2015 CDT <adam@tau>
+# name: corners
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 5
+# name: UL
+# type: matrix
+# rows: 1
+# columns: 2
+ CORNER_UL_LAT_PRODUCT CORNER_UL_LON_PRODUCT
+
+
+# name: UR
+# type: matrix
+# rows: 1
+# columns: 2
+ CORNER_UR_LAT_PRODUCT CORNER_UR_LON_PRODUCT
+
+
+# name: LR
+# type: matrix
+# rows: 1
+# columns: 2
+ CORNER_LR_LAT_PRODUCT CORNER_LR_LON_PRODUCT
+
+
+# name: LL
+# type: matrix
+# rows: 1
+# columns: 2
+ CORNER_LL_LAT_PRODUCT CORNER_LL_LON_PRODUCT
+
+# name: sceneID
+# type: sq_string
+# elements: 1
+# length: 21
+LANDSAT_SCENE_ID
+
+EOF

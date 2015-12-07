@@ -1,0 +1,20 @@
+function retmbins = mbinEvolve (mbins)
+	for i=1:length(mbins)
+		if(rand < .9)
+			retmbins{i} = sort(mbins{i} + .05*randn(size(mbins{i})));
+		elseif(size(mbins{i},2) == 1)
+			retmbins{i} = [mbins{i},partition(sort(rand(1,2)))];
+		else
+			if(rand < .7)
+				%insert bin
+				insertloc=randi(size(mbins{i},2)-1);
+				retmbins{i} = [mbins{i}(:,1:insertloc),mbins{i}(:,insertloc)+rand()*mbins{i}(:,insertloc+1),mbins{i}(:,insertloc+1:size(mbins{i},2))];
+			else
+				%delete a bin
+				deleteloc=randi(size(mbins{i},2));
+				retmbins{i} = [mbins{i}(:,1:deleteloc-1),mbins{i}(:,deleteloc+1:size(mbins{i},2))];
+			endif
+		endif
+	endfor
+endfunction
+

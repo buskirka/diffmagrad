@@ -1,0 +1,10 @@
+function rv = fractdim ( im )
+	function ret = lolokayfun (n,m) ; 
+		ret=repmat(m,[1,floor(n/m)]); 
+		if(rem(n,m)>0); 
+			ret=[ret,rem(n,m)]; 
+		endif; 
+	endfunction
+	g=@(p,b) cellfun (@(n) max (max (n)) > 0, mat2cell (im, lolokayfun (size (im, 1), p), lolokayfun (size (im, 2), p)));
+	N=arrayfun(@(p) sum(sum(g(p,3))), 100:-1:1);
+endfunction

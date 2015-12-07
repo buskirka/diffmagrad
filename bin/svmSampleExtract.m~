@@ -1,0 +1,42 @@
+function [retsvmlabel, retsvmdata] = svmSampleExtract( mbins, rbins, imTraining , imRawData , radius , point)
+% A function which extracts SVM training data using DMR.
+% 	mbins : The magnitudinal bins to use for the training.
+%	rbins : The radial bins to use for the training.
+%	imTraining : The training image. Should be:
+%		White (255) where data centers are,
+%		Grey (1-254, consistently) where data centers are *not*, and
+%		Black (0) where it should be ignored.
+%	imRawData : The raw data. Should be a 2-dimensional array.
+%	radius : The radius around `point' for which the neighborhood is valid.
+%	point : The point around which the neighborhood is chosen.
+% And outputs 
+%	retsvmlabel and
+%	retsvmdata
+% which can be entered into a learning machine.
+	
+	% Calculate how much margin we must take due to rbins:
+	%radiusExt=max(max(rbins));
+	
+	% Compute the DMR for the neighborhood desired, plus a margin to ensure it
+	% isn't ruined by the edges.
+	%h1=cellfun(@(x) vectorarrayify( histomatpDMR(mbins, rbins, neighborhood(x,point,radius+radiusExt)) ), imRawData , 'UniformOutput', false);
+	
+	% Shrink the data set to only those points which aren't affected by the 
+	% boundaries of the region
+	%for i=1:length(h1)
+	%	h2{i}=h1{i}((radiusExt):(2*radius+radiusExt),(radiusExt):(2*radius+radiusExt),:);
+	%endfor
+	
+	h=extractLocalDMR ( mbins, rbins, imRawData, radius, point )
+	
+	retsvmlabel=[]; 
+	retsvmdata=[]; 
+	for i=1:(1+2*radius); 
+		for j=1:(1+2*radius); 
+			if(neighborhood(imTraining,point,radius)(i,j) != 0); 
+				retsvmlabel=[retsvmlabel;neighborhood(imTraining,point,radius)(i,j)]; 
+				retsvmdata=[retsvmdata; h(i,j,:)(:)']; 
+			endif; 
+		endfor; 
+	endfor
+endfunction

@@ -14,6 +14,9 @@ if( exist('im','var') == 0)
 	printf('Loading TheDalles\n'); fflush(stdout);
 	cd([dir,'/TheDalles-LC80450282015295LGN00/']);
 	[ im{4} , tr{4} ] = loadL8data ;
+	printf('Loading SanAntonio\n'); fflush(stdout);
+	cd([dir,'/SanAntonio-LC80270402015265LGN00/']);
+	[ im{5} , tr{5} ] = loadL8data ;
 end
 cd(dir);
 
@@ -148,8 +151,8 @@ for i=1:size(binEcosystem,1)
 			binEcosystem2{i,j}.costs=binEcosystem{evolvebase(1),evolvebase(2)}.costs .* (0.9+0.2*rand(size(binEcosystem{evolvebase(1),evolvebase(2)}.costs)));
 			bandtoggle=round(rand(size(bands)).^20);
 			binEcosystem2{i,j}.bands=mod(binEcosystem{evolvebase(1),evolvebase(2)}.bands+bandtoggle,2);
-			if(max(binEcosystem2{1,1}.bands)==0)
-				binEcosystem2{1,1}.bands(3)=1;
+			if(max(binEcosystem2{i,j}.bands)==0)
+				binEcosystem2{i,j}.bands(3)=1;
 			endif
 			binEcosystem2{i,j}.live=1;
 			existsLiveCell=true;

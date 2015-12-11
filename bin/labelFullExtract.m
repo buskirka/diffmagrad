@@ -27,7 +27,7 @@ function [svl,svd] = labelFullExtract(mbins,rbins,DataTraining,DataCells)
 	endif
 	svl=[]; 
 	svd=[]; 
-	printf(['\nsvmFullExtract:']); 
+	printf(['\nlabelFullExtract:']); 
 	for i=100:100:(size(DataCells{1},1)-100); 
 		for j=100:100:(size(DataCells{1},2)-100); 
 			if(max(max(neighborhood(DataTraining,[i,j],50))) > 0); 

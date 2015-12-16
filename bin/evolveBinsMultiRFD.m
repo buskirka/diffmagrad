@@ -17,6 +17,9 @@ if( exist('im','var') == 0)
 	printf('Loading SanAntonio\n'); fflush(stdout);
 	cd([dir,'/SanAntonio-LC80270402015265LGN00/']);
 	[ im{5} , tr{5} ] = loadL8data ;
+	printf('Loading Altoona\n'); fflush(stdout);
+	cd([dir,'/Altoona-LC80260312015258LGN00/']);
+	[ im{6} , tr{6} ] = loadL8data ;
 end
 cd(dir);
 

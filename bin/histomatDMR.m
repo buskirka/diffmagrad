@@ -24,8 +24,7 @@ function retval = histomatDMR (mbins, rbins, data, coord)
 		summe=cellfun(
 			@(loc) DMR_Splicer(loc(1),loc(2),mbins,rbins,data), 
 			subcoord,
-			'UniformOutput', false, 
-			'VerboseLevel', 0);
+			'UniformOutput', false );
 		for x=1:size(summe,1)
 		for y=1:size(summe,2)
 			retval += summe{x,y} ;

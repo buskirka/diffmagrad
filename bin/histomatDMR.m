@@ -21,7 +21,7 @@ function retval = histomatpDMR (mbins, rbins, data, coord)
 	for suby=1:ceil(size(coord,2)/50); 
 		subcoord=coord( (50*subx-49):min(50*subx,size(coord,1)),(50*suby-49):min(50*suby,size(coord,2)) );
 		summe=cell(size(subcoord));
-		summe=parcellfun(min(nproc-1,8), 
+		summe=cellfun(
 			@(loc) DMR_Splicer(loc(1),loc(2),mbins,rbins,data), 
 			subcoord,
 			'UniformOutput', false, 

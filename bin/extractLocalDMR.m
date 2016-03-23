@@ -14,7 +14,7 @@ function retval = extractLocalDMR ( mbins, rbins, imRawData, radius, point )
 	for i=1:length(imRawData); 
 		index{i}=i; 
 	endfor
-	h1=cellfun(@(x) vectorarrayify( histomatpDMR(mbins{x}, rbins{x}, neighborhood(imRawData{x},point,radius+radiusExt)) ), index , 'UniformOutput', false);
+	h1=cellfun(@(x) vectorarrayify( histomatDMR(mbins{x}, rbins{x}, neighborhood(imRawData{x},point,radius+radiusExt)) ), index , 'UniformOutput', false);
 	for i=1:length(h1)
 		h2{i}=h1{i}((radiusExt):(2*radius+radiusExt),(radiusExt):(2*radius+radiusExt),:);
 	endfor

@@ -1,6 +1,6 @@
-% histomatpDMR.m
+% histomatDMR.m
 
-function retval = histomatpDMR (mbins, rbins, data, coord)
+function retval = histomatDMR (mbins, rbins, data, coord)
 	% Determine what the maximum radius necessary to be binned is.
 	mr = max(max(rbins));
 	% Instantiate the return value matrix (necessary here for use of `+=')

@@ -1,0 +1,326 @@
+# Created by Octave 4.0.0, Tue Dec 15 11:55:52 2015 CST <adam@tau>
+# name: datacenters
+# type: cell
+# rows: 1
+# columns: 11
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: Name
+# type: string
+# elements: 1
+# length: 15
+Hamina, Finland
+
+
+# name: Owner
+# type: string
+# elements: 1
+# length: 6
+Google
+
+
+# name: Location
+# type: matrix
+# rows: 1
+# columns: 2
+ 60.5373994 27.1185416
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: Name
+# type: string
+# elements: 1
+# length: 22
+Moncks Corner, SC, USA
+
+
+# name: Owner
+# type: string
+# elements: 1
+# length: 6
+Google
+
+
+# name: Location
+# type: matrix
+# rows: 1
+# columns: 2
+ 33.063939 -80.043255
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: Name
+# type: string
+# elements: 1
+# length: 23
+Council Bluffs, IA, USA
+
+
+# name: Owner
+# type: string
+# elements: 1
+# length: 6
+Google
+
+
+# name: Location
+# type: matrix
+# rows: 1
+# columns: 2
+ 41.2218438 -95.86415909999999
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: Name
+# type: string
+# elements: 1
+# length: 23
+Xianxi Township, Taiwan
+
+
+# name: Owner
+# type: string
+# elements: 1
+# length: 6
+Google
+
+
+# name: Location
+# type: matrix
+# rows: 1
+# columns: 2
+ 24.1384614 120.425108
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: Location
+# type: matrix
+# rows: 1
+# columns: 2
+ 33.7497162 -84.5848929
+
+
+# name: Owner
+# type: string
+# elements: 1
+# length: 6
+Google
+
+
+# name: Name
+# type: string
+# elements: 1
+# length: 18
+Douglas County, GA
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: Name
+# type: string
+# elements: 1
+# length: 10
+Lenoir, NC
+
+
+# name: Location
+# type: matrix
+# rows: 1
+# columns: 2
+ 35.8983203 -81.547466
+
+
+# name: Owner
+# type: string
+# elements: 1
+# length: 6
+Google
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: Owner
+# type: string
+# elements: 1
+# length: 6
+Google
+
+
+# name: Location
+# type: matrix
+# rows: 1
+# columns: 2
+ 45.631997 -121.200871
+
+
+# name: Name
+# type: string
+# elements: 1
+# length: 14
+The Dalles, OR
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: Owner
+# type: string
+# elements: 1
+# length: 6
+Google
+
+
+# name: Location
+# type: matrix
+# rows: 1
+# columns: 2
+ 36.2412329 -95.3304102
+
+
+# name: Name
+# type: string
+# elements: 1
+# length: 12
+Mayes County
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: Name
+# type: string
+# elements: 1
+# length: 10
+SanAntonio
+
+
+# name: Owner
+# type: string
+# elements: 1
+# length: 9
+Microsoft
+
+
+# name: Location
+# type: matrix
+# rows: 1
+# columns: 2
+ 29.4803227 -98.6928456
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: Owner
+# type: string
+# elements: 1
+# length: 9
+Microsoft
+
+
+# name: Name
+# type: string
+# elements: 1
+# length: 7
+Boydton
+
+
+# name: Location
+# type: matrix
+# rows: 1
+# columns: 2
+ 36.6774687 -78.3742747
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: Location
+# type: matrix
+# rows: 1
+# columns: 2
+ 41.6640278 -93.5145366
+
+
+# name: Owner
+# type: string
+# elements: 1
+# length: 8
+Facebook
+
+
+# name: Name
+# type: string
+# elements: 1
+# length: 7
+Altoona
+
+
+
+
+
+
+
